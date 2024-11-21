@@ -860,6 +860,10 @@ bool DkUtils::moveToTrash(const QString &filePath)
         // clang-format on
     }
 
+    if (!ok) {
+        ok = file.remove();
+    }
+
     return ok;
 }
 
